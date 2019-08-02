@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://localhost:3306/studentinfo?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false
+      url: jdbc:mysql://localhost:3306/studentinfo?useUnicode=true&&characterEncoding=utf8&useSSL=false&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC
+      username: root
+      password: st123456
+
+  devtools:
+      restart:
+        enabled: false
+        additional-paths: src/main/java
+        exclude: WEB-INF/**
+mybatis:
+  typeAliasesPackage: com.example.demo.entity
+  mapperLocations: classpath:mapping/*.xml
+
